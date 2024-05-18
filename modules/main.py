@@ -34,14 +34,14 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("𝙷𝚒! 𝐈❜𝐦 𝐓𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭 \n\n 𝙶𝚒𝚟𝚎 𝐇𝐢𝐝𝐝𝐞𝐧 𝙲𝚘𝚖𝚖𝚊𝚗𝚍 𝚝𝚘 𝙳𝚘𝚠𝚗𝚕𝚘𝚊𝚍 𝙵𝚛𝚘𝚖 𝚊 𝚃𝚎𝚡𝚝 𝚏𝚒𝚕𝚎.🎓✨..")
 
 
-@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command("ds"))
 async def restart_handler(_, m):
     await m.reply_text("**Stopped**🚦", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["a"]))
+@bot.on_message(filters.command(["d"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send TXT file for download ⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -162,8 +162,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f' {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}.mkv\n**Batch Name** :: **{raw_text0}**\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤** {MR}'
-                cc1 = f' {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}.pdf\n**Batch Name** :: **{raw_text0}**\n\n**𝐄𝐱𝐭𝐫𝐚𝐜𝐭𝐞𝐝 𝐁𝐲 ➤** {MR}'
+                cc = f' **{str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}.mkv**\n\n**Bᴀᴛᴄʜ Nᴀᴍᴇ »** `{raw_text0}`\n\n**Dᴏᴡɴʟᴏᴀᴅᴇᴅ Bʏ :** {MR}'
+                cc1 = f' **{str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}.pdf**\n\n**Bᴀᴛᴄʜ Nᴀᴍᴇ »** `{raw_text0}`\n\n**Dᴏᴡɴʟᴏᴀᴅᴇᴅ Bʏ :** {MR}'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
